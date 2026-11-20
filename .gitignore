@@ -1,0 +1,12 @@
+
+node_modules/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+coverage/
+npm-debug.log*
+.DS_Store
