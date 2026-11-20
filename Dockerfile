@@ -9,6 +9,9 @@ RUN npm ci --omit=dev && npm cache clean --force
 
 COPY src ./src
 
+# Certificados publicos de AWS RDS
+COPY certs ./certs
+
 ENV NODE_ENV=production
 ENV PORT=3000
 

@@ -1,13 +1,29 @@
 
 const mysql = require('mysql2/promise');
+const fs = require('node:fs');
+const path = require('node:path');
 
 function crearRepositorio() {
+  const rutaCertificado = path.join(
+    __dirname,
+    '..',
+    'certs',
+    'global-bundle.pem'
+  );
+
   const pool = mysql.createPool({
     host: process.env.DB_HOST,
     port: Number(process.env.DB_PORT || 3306),
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
+
+    // Conexion TLS obligatoria y verificacion del certificado RDS
+    ssl: {
+      ca: fs.readFileSync(rutaCertificado, 'utf8'),
+      rejectUnauthorized: true
+    },
+
     waitForConnections: true,
     connectionLimit: 5
   });
