@@ -10,3 +10,6 @@ evidencias
 *.key
 coverage
 README.md
+
+# Incluir el certificado publico de RDS en la imagen
+!certs/global-bundle.pem

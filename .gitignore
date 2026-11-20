@@ -10,3 +10,6 @@ node_modules/
 coverage/
 npm-debug.log*
 .DS_Store
+
+# Permitir solo el certificado publico de AWS RDS
+!certs/global-bundle.pem
