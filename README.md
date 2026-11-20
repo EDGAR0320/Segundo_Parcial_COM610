@@ -39,9 +39,9 @@ docker run --rm --name com610-prueba --env-file .env.example -p 127.0.0.1:3001:3
 
 En otra terminal:
 
-```bash
-curl http://127.0.0.1:3001/health
-```
+**URL de la API:** http://3.142.17.97/health
+
+**Consultar Libros:** http://3.142.17.97/libros
 
 La prueba de `/health` funciona con valores ficticios; las operaciones de libros requieren credenciales válidas de MariaDB.
 
@@ -94,3 +94,4 @@ La versión instalada se comprueba con `GET /health`: el campo `version` corresp
 - [Archivo de ejemplo de variables](.env.example)
 
 No se publican contraseñas, tokens, claves privadas ni archivos `.env` reales. Los recursos AWS deben permanecer activos hasta concluir la revisión docente.
+

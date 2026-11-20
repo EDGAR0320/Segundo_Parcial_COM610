@@ -1179,7 +1179,37 @@ sudo docker ps
 
 ---
 
+## PASO 19 (ADICIONAL). Insertar 5 libros en RDS mediante la API
+```bash
+# LIBRO 1
+curl -i -X POST http://3.142.17.97/libros \
+-H "Content-Type: application/json" \
+-d '{"titulo":"Clean Code","autor":"Robert C. Martin","anio_publicacion":2008}'
 
+# LIBRO 2
+curl -i -X POST http://3.142.17.97/libros \
+-H "Content-Type: application/json" \
+-d '{"titulo":"Design Patterns","autor":"Erich Gamma","anio_publicacion":1994}'
+
+# LIBRO 3
+curl -i -X POST http://3.142.17.97/libros \
+-H "Content-Type: application/json" \
+-d '{"titulo":"Introduction to Algorithms","autor":"Thomas H. Cormen","anio_publicacion":2009}'
+
+# LIBRO 4
+curl -i -X POST http://3.142.17.97/libros \
+-H "Content-Type: application/json" \
+-d '{"titulo":"The Pragmatic Programmer","autor":"Andrew Hunt","anio_publicacion":1999}'
+
+# LIBRO 5
+curl -i -X POST http://3.142.17.97/libros \
+-H "Content-Type: application/json" \
+-d '{"titulo":"Computer Networks","autor":"Andrew S. Tanenbaum","anio_publicacion":2011}'
+```
+
+**Consultar Libros:** http://3.142.17.97/libros
+
+![alt text](image-8.png)
 
 ## Paso 20. Publicar informe y evidencias sin publicar secretos
 
