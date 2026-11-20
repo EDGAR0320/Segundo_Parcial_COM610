@@ -121,7 +121,7 @@ test('DELETE /libros/:id elimina un libro', async () => {
   });
 
   const res = await request(app).delete(`/libros/${creado.body.id}`);
-  expect(res.status).toBe(500);
+  expect(res.status).toBe(200);
 
   const consulta = await request(app).get(`/libros/${creado.body.id}`);
   expect(consulta.status).toBe(404);
