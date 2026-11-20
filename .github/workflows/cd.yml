@@ -92,7 +92,7 @@ jobs:
             -o BatchMode=yes \
             -o StrictHostKeyChecking=yes \
             "$SSH_USER@$SSH_HOST" \
-            "sudo -n /usr/local/bin/deploy-libros.sh '$DOCKER_USERNAME/com610-libros' '$SHA'"
+            "sudo -n bash /usr/local/bin/deploy-libros.sh '$DOCKER_USERNAME/com610-libros' '$SHA'"
 
       - name: Eliminar clave temporal
         if: always()
