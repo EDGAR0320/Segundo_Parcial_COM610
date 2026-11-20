@@ -47,7 +47,7 @@ La prueba de `/health` funciona con valores ficticios; las operaciones de libros
 
 ## 2. API pública
 
-**URL:** http://3.142.17.97
+**URL:** http://3.142.17.97/health
 
 | Método | Ruta | Función |
 |---|---|---|
